@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+>
+
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="300dp"
+               android:id="@+id/deal_details_image_view"
+               tools:src="@mipmap/ic_launcher"
+               android:layout_margin="30dp"
+               android:layout_centerHorizontal="true"
+               android:contentDescription="@null"
+    />
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/deal_details_description_layout"
+                    android:layout_below="@+id/deal_details_image_view"
+                    android:layout_above="@+id/add_cart_list_layout">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/border_margin"
+                  tools:text="$8.98"
+                  android:id="@+id/deal_details_sales_price_text_view"
+                  style="@style/TextAppearance.AppCompat.Large"
+                  android:textColor="@android:color/holo_red_dark"
+                  android:textStyle="bold"
+        />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/deal_details_regular_price_text_view"
+                  tools:text="Reg : $12.90"
+                  android:textStyle="bold"
+                  style="@style/TextAppearance.AppCompat.Large"
+                  android:textColor="@android:color/darker_gray"
+                  android:layout_alignParentEnd="true"
+                  android:gravity="end"
+                  android:layout_marginEnd="@dimen/border_margin"
+        />
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/deal_details_title_text_view"
+                  tools:text="Tiered Lace Tank - Lily Star"
+                  style="@style/TextAppearance.AppCompat.Large"
+                  android:layout_below="@+id/deal_details_sales_price_text_view"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginStart="@dimen/border_margin"
+        />
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_below="@+id/deal_details_title_text_view"
+        >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/deal_details_description_text_view"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginStart="@dimen/border_margin"
+                      android:layout_marginEnd="@dimen/border_margin"
+                      android:paddingBottom="30dp"
+                      tools:text="START vk ncmsnmc cdsm m nman ffajcgjv jbdjb ajajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vkvk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cajcgjv jbdjb vk ncmsnmc cdsm m nman ffajcgjv jbdjb vk ncmsnmc cdsm m nman ff ajcgjv jbdjb vk ncmsnmc cdsm m nman ff ajcgjv jbdjb vk ncmsnmc cdsm m nman ff ASHISH IS A GOOD BOY YA YA YO YO HONEY SINGH HHH END OF THE TEXT"
+            />
+        </ScrollView>
+
+
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:id="@+id/add_cart_list_layout"
+                  android:weightSum="2">
+
+        <Button android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_to_list"
+                android:textAllCaps="false"
+                android:background="@android:color/darker_gray"/>
+
+        <Button android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_to_cart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_dark"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/border_margin"
+              android:layout_marginBottom="@dimen/border_margin">
+
+    <ImageView android:layout_width="wrap_content"
+               android:contentDescription="@null"
+               android:layout_height="wrap_content"
+               android:id="@+id/deal_image_view"
+               android:layout_gravity="start"
+               tools:src="@mipmap/ic_launcher"
+               android:layout_marginStart="20dp"/>
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_marginEnd="20dp"
+                  android:layout_marginStart="15dp">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/deal_name_textView"
+                  tools:text="Women's Linen Drapery Tank - Black/White"
+                  style="@style/TextAppearance.AppCompat.Large"
+        />
+        <View android:layout_width="wrap_content"
+              android:layout_height=".5dp"
+              android:background="@android:color/darker_gray"
+              android:id="@+id/divider_view"
+              android:layout_gravity="center"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="5dp"/>
+
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/price_shippping_layout">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/deal_price_text_view"
+                      tools:text="$12.00"
+                      android:gravity="center"
+                      style="@style/TextAppearance.AppCompat.Large"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:background="@drawable/circle_shape"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/aisle_number_text_view"
+                      android:layout_alignParentEnd="true"
+                      tools:text="C1"
+                      android:textColor="@android:color/holo_red_dark"
+                      android:layout_alignBaseline="@+id/deal_price_text_view"
+                      android:gravity="center"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/or_text_view"
+                      android:text="@string/or"
+                      android:layout_toStartOf="@+id/aisle_number_text_view"
+                      android:layout_marginEnd="5dp"
+                      android:layout_alignBaseline="@+id/deal_price_text_view"
+                      android:gravity="center"
+                      android:enabled="false"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/ship"
+                      android:gravity="center"
+                      android:layout_alignBaseline="@+id/deal_price_text_view"
+                      android:layout_toStartOf="@+id/or_text_view"
+                      android:layout_marginEnd="5dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
