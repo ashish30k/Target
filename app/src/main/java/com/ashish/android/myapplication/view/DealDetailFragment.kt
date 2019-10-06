@@ -14,6 +14,7 @@ import com.ashish.android.myapplication.R
 import com.ashish.android.myapplication.model.Deal
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_deal_details.view.*
+import kotlinx.android.synthetic.main.tool_bar.view.*
 
 class DealDetailFragment : Fragment() {
     private var deal: Deal? = null
@@ -31,9 +32,11 @@ class DealDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val rootView = inflater.inflate(R.layout.fragment_deal_details, container, false)
 
         deal?.let {
+            rootView.my_toolbar.title = it.title
             Picasso.get().load(it.image).into(rootView.deal_details_image_view)
             rootView.deal_details_title_text_view.text = it.title
             rootView.deal_details_description_text_view.text = it.description

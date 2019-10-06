@@ -12,7 +12,7 @@ import com.ashish.android.myapplication.model.Deal
 import com.squareup.picasso.Picasso
 
 class DealsRecyclerViewAdapter(
-    val context: Context,
+    val context: Context?,
     var deals: MutableList<Deal>,
     val dealClickListener: ((Deal) -> Unit)
 ) : RecyclerView.Adapter<DealsRecyclerViewAdapter.DealViewHolder>() {
@@ -41,7 +41,7 @@ class DealsRecyclerViewAdapter(
         } else if (deal.price != null) {
             holder.dealPriceTextView.text = deal.price
         } else {
-            holder.dealPriceTextView.text = context.getString(R.string.price_not_available);
+            holder.dealPriceTextView.text = context?.getString(R.string.price_not_available);
         }
     }
 

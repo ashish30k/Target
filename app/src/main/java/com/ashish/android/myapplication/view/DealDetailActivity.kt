@@ -6,14 +6,13 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.ashish.android.myapplication.R
 import com.ashish.android.myapplication.model.Deal
-import kotlinx.android.synthetic.main.activity_deal_list.*
 
 class DealDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_deal_detail)
-        setSupportActionBar(toolbar)
+        //setSupportActionBar(toolbar)
 
 
         if (savedInstanceState == null) {
