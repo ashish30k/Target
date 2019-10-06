@@ -23,4 +23,4 @@ interface TargetAPIService {
     }
 }
 
-val BASE_URL = "http://target-deals.herokuapp.com/"
+const val BASE_URL = "http://target-deals.herokuapp.com/"
