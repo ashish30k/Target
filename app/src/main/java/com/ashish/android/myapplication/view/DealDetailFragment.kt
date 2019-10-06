@@ -34,8 +34,9 @@ class DealDetailFragment : Fragment() {
     ): View? {
 
         val rootView = inflater.inflate(R.layout.fragment_deal_details, container, false)
+        val dealDetailsUIModel = DealDetailsUIModel(context, deal)
 
-        deal?.let {
+        dealDetailsUIModel.deal?.let {
             rootView.my_toolbar.title = it.title
             Picasso.get().load(it.image).into(rootView.deal_details_image_view)
             rootView.deal_details_title_text_view.text = it.title
@@ -44,8 +45,8 @@ class DealDetailFragment : Fragment() {
             if (it.salePrice != null && it.price != null) {
                 rootView.deal_details_sales_price_text_view.text = it.salePrice
 
-                val regularPriceLabelString = getString(R.string.regular_price_label) + " "
-                val regularPrice = regularPriceLabelString + it.price
+                val regularPriceLabelString = dealDetailsUIModel.getRegularPriceLabel()
+                val regularPrice = dealDetailsUIModel.getRegularPrice()
                 rootView.deal_details_regular_price_text_view.setText(regularPrice, TextView.BufferType.SPANNABLE)
                 val spannable = rootView.deal_details_regular_price_text_view.text as Spannable
                 spannable.setSpan(
