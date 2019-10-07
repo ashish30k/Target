@@ -2,14 +2,18 @@ package com.ashish.android.myapplication.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import com.ashish.android.myapplication.common.viewmodel.BaseViewModel
 import com.ashish.android.myapplication.model.DealList
 import com.ashish.android.myapplication.network.DealsRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class DealsViewModel(private val dealsRepository: DealsRepository) : ViewModel() {
+class DealsViewModel : BaseViewModel() {
+    @Inject
+    lateinit var dealsRepository: DealsRepository
+
     private val compositeDisposable = CompositeDisposable()
 
     private var _dealsLiveData = MutableLiveData<DealList>()

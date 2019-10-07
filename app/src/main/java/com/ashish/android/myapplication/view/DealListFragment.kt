@@ -14,10 +14,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.ashish.android.myapplication.R
-import com.ashish.android.myapplication.network.DealsRepository
-import com.ashish.android.myapplication.network.TargetAPIService
 import com.ashish.android.myapplication.viewmodel.DealsViewModel
-import com.ashish.android.myapplication.viewmodel.DealsViewModelFactory
 
 class DealListFragment : Fragment() {
     private lateinit var progress: ProgressDialog
@@ -40,12 +37,7 @@ class DealListFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        // TODO better use Dagger here to inject instances of  TargetAPIService,  DealsRepository and DealsViewModelFactory
-        val dealsRepository = DealsRepository(TargetAPIService.create())
-        val dealsViewModelFactory = DealsViewModelFactory(dealsRepository)
-
-        dealsViewModel =
-            ViewModelProviders.of(this, dealsViewModelFactory).get(DealsViewModel::class.java)
+        dealsViewModel = ViewModelProviders.of(this).get(DealsViewModel::class.java)
         observerLiveData()
         dealsViewModel.fetchDeals()
     }
