@@ -1,7 +1,6 @@
 package com.ashish.android.myapplication.common.dagger
 
-import com.ashish.android.myapplication.network.DealsRepository
-import com.ashish.android.myapplication.network.TargetAPIService
+import com.ashish.android.myapplication.data.TargetAPIService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -28,11 +27,5 @@ object NetworkModule {
     @Singleton
     fun provideTargetApi(retrofit: Retrofit): TargetAPIService {
         return retrofit.create(TargetAPIService::class.java)
-    }
-
-    @Provides
-    @Singleton
-    fun provideDealsRepository(targetAPIService: TargetAPIService): DealsRepository {
-        return DealsRepository(targetAPIService)
     }
 }

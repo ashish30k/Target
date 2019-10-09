@@ -10,7 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.ashish.android.myapplication.R
@@ -37,14 +36,14 @@ class DealListFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        dealsViewModel = ViewModelProviders.of(this).get(DealsViewModel::class.java)
+        dealsViewModel = (activity as DealListActivity).getDealsViewModel()
         observerLiveData()
         dealsViewModel.fetchDeals()
     }
 
     private fun observerLiveData() {
         dealsViewModel.dealsLiveData.observe(this, Observer { dealList ->
-            dealsRecyclerViewAdapter.setItems(dealList.deals.toMutableList())
+            dealsRecyclerViewAdapter.setItems(dealList.toMutableList())
         })
 
         dealsViewModel.noDealAvailableLiveData.observe(this, Observer {

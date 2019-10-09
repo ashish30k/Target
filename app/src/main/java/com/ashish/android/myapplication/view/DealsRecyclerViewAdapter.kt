@@ -1,6 +1,5 @@
 package com.ashish.android.myapplication.view
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,11 +11,9 @@ import com.ashish.android.myapplication.model.Deal
 import com.squareup.picasso.Picasso
 
 class DealsRecyclerViewAdapter(
-    val context: Context?,
     var deals: MutableList<Deal>,
     val dealClickListener: ((Deal) -> Unit)
 ) : RecyclerView.Adapter<DealsRecyclerViewAdapter.DealViewHolder>() {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DealViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.deal_row, parent, false)
@@ -35,24 +32,6 @@ class DealsRecyclerViewAdapter(
         notifyDataSetChanged()
     }
 
-    private fun bindDealPrice(holder: DealViewHolder, deal: Deal) {
-        if (deal.salePrice != null) {
-            holder.dealPriceTextView.text = deal.salePrice
-        } else if (deal.price != null) {
-            holder.dealPriceTextView.text = deal.price
-        } else {
-            holder.dealPriceTextView.text = context?.getString(R.string.price_not_available);
-        }
-    }
-
-    private fun bindDealName(holder: DealViewHolder, deal: Deal) {
-        holder.dealNameTextView.text = deal.title
-    }
-
-    private fun bindDealAisleNumber(holder: DealViewHolder, deal: Deal) {
-        holder.dealAisleNumberTextView.text = deal.aisle
-    }
-
     class DealViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val dealImageView = itemView.findViewById<ImageView>(R.id.deal_image_view)
         val dealNameTextView = itemView.findViewById<TextView>(R.id.deal_name_textView)
@@ -60,7 +39,9 @@ class DealsRecyclerViewAdapter(
         val dealAisleNumberTextView = itemView.findViewById<TextView>(R.id.aisle_number_text_view)
 
         fun bind(deal: Deal, listener: (Deal) -> Unit) = with(itemView) {
-            Picasso.get().load(deal.image).into(dealImageView)
+            Picasso.get().load(deal.image)
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(dealImageView)
 
             if (deal.salePrice != null) {
                 dealPriceTextView.text = deal.salePrice
@@ -75,7 +56,5 @@ class DealsRecyclerViewAdapter(
 
             setOnClickListener { listener(deal) }
         }
-
-
     }
 }

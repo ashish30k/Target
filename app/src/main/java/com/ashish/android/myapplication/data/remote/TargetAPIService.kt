@@ -1,4 +1,4 @@
-package com.ashish.android.myapplication.network
+package com.ashish.android.myapplication.data
 
 import com.ashish.android.myapplication.model.DealList
 import io.reactivex.Observable
