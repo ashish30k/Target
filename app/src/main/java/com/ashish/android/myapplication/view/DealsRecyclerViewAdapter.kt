@@ -40,7 +40,6 @@ class DealsRecyclerViewAdapter(
 
         fun bind(deal: Deal, listener: (Deal) -> Unit) = with(itemView) {
             Picasso.get().load(deal.image)
-                .placeholder(R.drawable.ic_launcher_background)
                 .into(dealImageView)
 
             if (deal.salePrice != null) {
