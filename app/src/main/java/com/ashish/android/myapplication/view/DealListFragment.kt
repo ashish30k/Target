@@ -71,7 +71,7 @@ class DealListFragment : Fragment() {
         val dividerItemDecoration = DividerItemDecoration(this.activity, DividerItemDecoration.VERTICAL)
         dealsRecyclerView.addItemDecoration(dividerItemDecoration)
 
-        dealsRecyclerViewAdapter = DealsRecyclerViewAdapter(this.context, mutableListOf()) {
+        dealsRecyclerViewAdapter = DealsRecyclerViewAdapter(mutableListOf()) {
 
             val intent = Intent(this.activity, DealDetailActivity::class.java).apply {
                 putExtra(DealDetailFragment.ARG_DEAL, it)
